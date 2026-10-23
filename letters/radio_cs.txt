@@ -1,0 +1,14 @@
+SUBJECT: 60 sekund ve vašem éteru — auto pro ukrajinskou frontovou jednotku
+Týmu {{station}} v {{city}},
+
+Ihor, ukrajinský voják na frontové linii, ztratil již tři vozidla: první shořelo po zásahu raketou, dvě další si koupil sám — zničil je dron a raketový útok Iskander. Přesto se na front vrací dál.
+
+Do Nového roku mu kupujeme čtvrté vozidlo. Nežádáme vás o sbírku — pokud {{station}} odvysílá 60sekundový apel (text níže, případně jej náš dobrovolník namluví), samo o sobě pokryje významnou část vozidla.
+
+Text 60 sekund: „Ihor brání frontu Ukrajiny. Tři z jeho vozidel byla zničena — poslední raketa Iskander, která nezanechala nic. Do Nového roku mu kupujeme čtvrté. Dolar od dostatečného počtu lidí stačí. Přispět lze na: {{jar}}. Každá hřivna je veřejně vyúčtována."
+
+Fotografie, mediální reference a reporty na vyžádání.
+
+— {{signature}}
+
+Odpovězte „ne" a už nepíšeme.
