@@ -1,0 +1,15 @@
+SUBJECT: A verified front-line fundraiser we ask you to relay to your community
+
+Dear {{station}} ({{city}}),
+
+Our volunteer team is raising funds for the fourth vehicle of Ihor — a Ukrainian front-line soldier who has lost three cars to missile and drone strikes (the latest story was covered by Ukrainian media — links available).
+
+We are not a registered charity — we are a transparent volunteer collection: weekly jar screenshots, purchase receipts, delivery photos, and a public final report. Everything is published on our page: {{jar}}
+
+Could you relay our appeal to your community (newsletter, bulletin, announcement after service or meeting)? A one-minute read could bring us weeks closer to the goal.
+
+Donations: {{jar}} (SWIFT available) · Contact: {{contact_email}}
+
+— {{signature}}
+
+Reply "no" and we won't write again.
