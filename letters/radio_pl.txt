@@ -1,0 +1,14 @@
+SUBJECT: 60 sekund w Państwa antenie — samochód dla ukraińskiej jednostki na froncie
+Zespół {{station}} w {{city}},
+
+Ihor, ukraiński żołnierz na pierwszej linii, stracił już trzy pojazdy: pierwszy spłonął po uderzeniu rakiety, dwa kolejne kupił z własnych oszczędności — zniszczył je dron i uderzenie rakiety Iskander. Mimo wszystko wraca na pozycje.
+
+W tym roku na Nowy Rok kupujemy mu czwarty samochód. Nie prosimy o zbiórkę — jeśli {{station}} nada 60-sekundowy apel (tekst poniżej lub nasz wolontariusz nagra go po polsku), to samo w sobie pokryje znaczną część kosztów pojazdu.
+
+Skrypt 60 sekund: „Ihor broni Ukrainy na pierwszej linii. Trzy jego pojazdy zostały zniszczone — ostatni przez rakietę Iskander, która nie zostawiła niczego. W tym roku kupujemy mu czwarty. Jeden dolar od wielu ludzi wystarczy. Wpłaty: {{jar}}. Każda hrywna jest publicznie rozliczana."
+
+Zdjęcia, odnośniki do mediów i raporty na życzenie.
+
+— {{signature}}
+
+Odpowiedz „nie", a więcej nie napiszemy.

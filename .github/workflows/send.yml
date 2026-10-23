@@ -1,0 +1,42 @@
+name: daily-send
+on:
+  schedule:
+    - cron: "0 6 * * *" # 06:00 UTC = 08:00/09:00 за Києвом
+  workflow_dispatch:
+    inputs:
+      test_email:
+        description: "Якщо вказати — надіслати ТІЛЬКИ тест-лист на цю адресу"
+        required: false
+        default: ""
+      limit:
+        description: "Скільки листів відправити"
+        required: false
+        default: "10"
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Відправка порції
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          SENDER_NAME: ${{ secrets.SENDER_NAME }}
+          DAILY_LIMIT: ${{ github.event.inputs.limit || '10' }}
+        run: |
+          if [ -n "${{ github.event.inputs.test_email }}" ]; then
+            python scripts/send_batch.py --test "${{ github.event.inputs.test_email }}"
+          else
+            python scripts/send_batch.py
+          fi
+      - name: Зберегти трекер
+        run: |
+          git config user.name "fundraiser-agent"
+          git config user.email "agent@users.noreply.github.com"
+          git add radio-tracker.csv
+          git diff --cached --quiet || git commit -m "tracker: daily batch $(date -u +%F)"
+          git push

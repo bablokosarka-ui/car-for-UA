@@ -1,0 +1,19 @@
+name: daily-report
+on:
+  schedule:
+    - cron: "30 6 * * *" # 06:30 UTC = 08:30/09:30 за Києвом
+  workflow_dispatch:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Ранковий звіт у Telegram
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: python scripts/report.py

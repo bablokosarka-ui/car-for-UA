@@ -1,0 +1,2 @@
+date_added,country,city,station_name,genre,contact_email,contact_form_url,language,letter_template_sent,date_sent,followup_due,response,response_date,notes
+2026-10-24,EXAMPLE-Poland,Warsaw,EXAMPLE Radio Station,news/talk,news@example-radio.pl,https://example-radio.pl/contact,PL,#2 radio letter,2026-10-25,2026-10-29,,,приклад рядка — видалити після заповнення
