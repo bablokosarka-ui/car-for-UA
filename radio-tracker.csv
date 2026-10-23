@@ -1,2 +1,12 @@
-date_added,country,city,station_name,genre,contact_email,contact_form_url,language,letter_template_sent,date_sent,followup_due,response,response_date,notes
-2026-10-24,EXAMPLE-Poland,Warsaw,EXAMPLE Radio Station,news/talk,news@example-radio.pl,https://example-radio.pl/contact,PL,#2 radio letter,2026-10-25,2026-10-29,,,приклад рядка — видалити після заповнення
+﻿date_added,country,city,station_name,genre,contact_email,contact_form_url,language,letter_template_sent,date_sent,followup_due,response,response_date,notes
+2026-10-24,Poland,Kraków,Radio Kraków,regional public / news,redakcja@radiokrakow.pl,https://www.radiokrakow.pl/kontakt,PL,,,,,,"Email редакції новин, перевірено 24.10. Дублікат: rkk@radiokrakow.pl"
+2026-10-24,Poland,Lublin,Radio Lublin,regional public / news,informacje@radiolublin.pl,https://radio.lublin.pl/kontakt,PL,,,,,,Керівник новин: Tomasz Spicyn tomasz.spicyn@radiolublin.pl — писати особисто йому (персональний пітч)
+2026-10-24,Canada,Toronto,CHIN Radio 1540 AM,multicultural,info@chinradio.com,https://www.chinradio.com/contact-main,EN,,,,,,Українські програми Toronto+Ottawa; окремий email Оттави (chinottawa@) обрізаний у сніпеті — перевірити на сайті
+2026-10-24,Canada,Ottawa,CHIN Radio Ottawa,multicultural,,https://www.chinradio.com/contact-main,EN,,,,,,Дозаповнити email з офіційного contact page
+2026-10-24,Canada,Toronto,CIUT 89.5 FM,community/university,,https://ciut.fm/contact,EN,,,,,,"Шоу No Manʼs Land (укр. діаспора, нд 18:00). Окремий email шоу не підтверджений — писати через загальний контакт"
+2026-10-24,Canada,Vancouver,Diaspora FM 96.1,Ukrainian diaspora,,https://www.youtube.com/@diaspora-fm,EN,,,,,,"Перше укр. радіо Ванкувера, керівниця Tetiana Lisovyn; контакт через FB/YouTube"
+2026-10-24,UK,London,Resonance FM 104.4,community arts,contact@resonancefm.com,https://www.resonancefm.com,EN,,,,,,"Приймають пропозиції програм; офіційний email з сайту, перевірено 24.10"
+2026-10-24,Germany,Stuttgart,Good Morning Deutschland (FRS),community network,info@goodmorningdeutschland.org,https://www.freie-radios.de/kontakt.html,DE,,,,,,Проєкт обміну програмами Freies Radio Stuttgart
+2026-10-24,Germany,(мережа),Bundesverband Freier Radios,network umbrella,,https://www.freie-radios.de/kontakt.html,DE,,,,,,Зонтична орг. 20+ бюргеррадіо; список членів на сайті — батч 2
+2026-10-24,Germany,(портал),freie-radios.net,program exchange portal,,https://www.freie-radios.net,DE,,,,,,СТРАТЕГІЧНО: завантажити готовий аудіо-PSA (UA/EN/DE) один раз — усі станції-члени зможуть взяти в ефір
+2026-10-24,USA,(онлайн),ukrainian.us Radio,Ukrainian diaspora online,info@ukrainian.us,https://ukrainian.us/page/about,EN,,,,,,"Онлайн-радіо діаспори, тісно співпрацює зі спільнотами; email з офіційного About"
