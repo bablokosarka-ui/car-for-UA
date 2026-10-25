@@ -11,7 +11,8 @@ Text 60 sekund: „Ihor brání frontu Ukrajiny. Tři z jeho vozidel byla zniče
 
 Fotografie, mediální reference a reporty na vyžádání.
 
-— ВАШЕ ІМ'Я, волонтер (замініть у config.json)
+— Волонтерська команда збору «Четверта машина» / Volunteer team, Ihor's 4th Vehicle fundraiser (official collector: Ihor Shabat)
+https://bablokosarka-ui.github.io/car-for-UA/
 
 Odpovězte „ne" a už nepíšeme.
 

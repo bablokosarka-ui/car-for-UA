@@ -11,7 +11,8 @@ Skrypt 60 sekund: „Ihor broni Ukrainy na pierwszej linii. Trzy jego pojazdy zo
 
 Zdjęcia, odnośniki do mediów i raporty na życzenie.
 
-— ВАШЕ ІМ'Я, волонтер (замініть у config.json)
+— Волонтерська команда збору «Четверта машина» / Volunteer team, Ihor's 4th Vehicle fundraiser (official collector: Ihor Shabat)
+https://bablokosarka-ui.github.io/car-for-UA/
 
 Odpowiedz „nie", a więcej nie napiszemy.
 
