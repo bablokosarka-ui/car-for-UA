@@ -12,3 +12,5 @@
 
 Поки що збираємо — цільову суму оприлюднимо одразу після вибору авто.
 Банка: https://send.monobank.ua/jar/6kf2A7C3eh
+
+[лендінг збору: https://bablokosarka-ui.github.io/car-for-UA/]

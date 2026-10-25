@@ -10,3 +10,5 @@
 Кожен донат видно публічно на баночці. Щотижня — повний скрін із датою.
 
 Приєднатися: https://send.monobank.ua/jar/6kf2A7C3eh
+
+[лендінг збору: https://bablokosarka-ui.github.io/car-for-UA/]
