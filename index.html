@@ -3,305 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Авто для хлопців на позиціях — збір до Нового року</title>
+<title>Четверта машина — збір для Ігоря | Інженерні війська</title>
 <style>
-  :root {
-    --bg: #0d1117;
-    --card: #161b22;
-    --border: #30363d;
-    --text: #e6edf3;
-    --muted: #8b949e;
-    --yellow: #ffd500;
-    --blue: #0057b7;
-    --green: #2ea043;
+  :root{
+    --bg:#0b0e13; --bg2:#10151d; --card:#151b25; --border:#26303e;
+    --text:#e8edf4; --muted:#93a1b3; --yellow:#ffd500; --blue:#0f62d0;
+    --red:#e5484d; --green:#30a46c;
   }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: var(--bg); color: var(--text);
-    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    line-height: 1.6; padding-bottom: 60px;
-  }
-  .container { max-width: 860px; margin: 0 auto; padding: 0 16px; }
-  header {
-    background: linear-gradient(135deg, #0057b7 0%, #003a7a 60%, #0d1117 100%);
-    padding: 56px 0 40px; border-bottom: 3px solid var(--yellow);
-  }
-  h1 { font-size: 2rem; line-height: 1.25; margin-bottom: 12px; }
-  .subtitle { color: #c9d1d9; font-size: 1.05rem; }
-  .flag-line { width: 120px; height: 6px; margin-top: 18px;
-    background: linear-gradient(180deg, var(--blue) 50%, var(--yellow) 50%); border-radius: 3px; }
-  section { background: var(--card); border: 1px solid var(--border);
-    border-radius: 10px; padding: 24px; margin-top: 24px; }
-  h2 { font-size: 1.25rem; margin-bottom: 14px; color: var(--yellow); }
-  h3 { font-size: 1rem; margin: 14px 0 8px; }
-  p.muted, .muted { color: var(--muted); font-size: 0.92rem; }
-
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65;padding-bottom:70px}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px}
+  header{position:relative;overflow:hidden;padding:88px 0 56px;text-align:center;
+    background:radial-gradient(1200px 500px at 50% -10%, rgba(15,98,208,.35), transparent 60%), var(--bg);
+    border-bottom:3px solid var(--yellow)}
+  .flag{width:150px;height:8px;margin:26px auto 0;border-radius:4px;
+    background:linear-gradient(180deg,var(--blue) 50%,var(--yellow) 50%)}
+  h1{font-size:clamp(1.6rem,4.5vw,2.6rem);line-height:1.2;font-weight:800}
+  .sub{color:#c6d2e2;margin-top:14px;max-width:640px;margin-left:auto;margin-right:auto}
+  .kicker{display:inline-block;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--yellow);border:1px solid rgba(255,213,0,.35);border-radius:99px;padding:5px 14px;margin-bottom:18px}
+  .cta-row{margin-top:26px}
+  .btn{display:inline-block;padding:15px 26px;border-radius:10px;font-weight:700;text-decoration:none;font-size:1.05rem;margin:6px 6px}
+  .btn-y{background:var(--yellow);color:#151515}
+  .btn-o{border:2px solid var(--border);color:var(--text)}
+  .btn-o:hover{border-color:var(--yellow);color:var(--yellow)}
+  section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:30px;margin-top:26px}
+  h2{font-size:1.35rem;color:var(--yellow);margin-bottom:6px}
+  .lead{color:var(--muted);margin-bottom:18px}
+  .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .ph{border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--bg2)}
+  .ph img{width:100%;display:block}
+  .ph .cap{padding:10px 12px;font-size:.85rem;color:var(--muted)}
   /* Прогрес */
-  .progress-wrap { margin-top: 20px; }
-  .progress-bar { background: #21262d; border-radius: 8px; height: 28px; overflow: hidden; }
-  .progress-fill { background: linear-gradient(90deg, var(--blue), var(--yellow));
-    height: 100%; width: 0%; transition: width .6s ease; }
-  .progress-labels { display: flex; justify-content: space-between; margin-top: 8px;
-    font-size: 0.95rem; }
-
-  /* Кнопки донату */
-  .btn {
-    display: inline-block; padding: 14px 22px; border-radius: 8px; font-weight: 700;
-    text-decoration: none; font-size: 1.05rem; margin: 6px 8px 6px 0; border: none; cursor: pointer;
-  }
-  .btn-primary { background: var(--yellow); color: #1a1a1a; }
-  .btn-primary:hover { filter: brightness(1.08); }
-  .btn-secondary { background: transparent; color: var(--text);
-    border: 2px solid var(--border); }
-  .btn-secondary:hover { border-color: var(--yellow); color: var(--yellow); }
-
+  .bar{background:#0d1117;border:1px solid var(--border);border-radius:10px;height:32px;overflow:hidden;margin-top:8px}
+  .fill{height:100%;width:0%;border-radius:9px;background:linear-gradient(90deg,var(--blue),var(--yellow));transition:width .8s ease}
+  .bar-lbl{display:flex;justify-content:space-between;font-size:.95rem;margin-top:8px}
+  /* Таймлайн */
+  .tl{position:relative;margin-top:24px;padding-left:34px}
+  .tl::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:3px;border-radius:2px;
+    background:linear-gradient(180deg,var(--green),var(--yellow) 45%,var(--red) 75%,var(--blue))}
+  .tl-item{position:relative;margin-bottom:34px}
+  .tl-item::before{content:"";position:absolute;left:-31px;top:8px;width:15px;height:15px;border-radius:50%;
+    background:var(--bg);border:4px solid var(--yellow)}
+  .tl-item.bad::before{border-color:var(--red)}
+  .tl-item.first::before{border-color:var(--green)}
+  .tl-item.now::before{border-color:var(--blue);box-shadow:0 0 0 6px rgba(15,98,208,.25)}
+  .tl-tag{display:inline-block;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:99px;margin-bottom:8px}
+  .tag1{background:rgba(48,164,108,.15);color:#5fd39a}.tag2{background:rgba(255,213,0,.13);color:var(--yellow)}
+  .tag3{background:rgba(229,72,77,.15);color:#ff8589}.tag4{background:rgba(15,98,208,.2);color:#7db3ff}
+  .tl-item h3{font-size:1.15rem;margin-bottom:8px}
+  .tl-item p{color:var(--muted);font-size:.97rem}
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  .ba .ph{position:relative}
+  .ba .lbl{position:absolute;top:8px;left:8px;font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:99px;background:rgba(0,0,0,.65)}
+  .lbl.ok{color:#5fd39a}.lbl.no{color:#ff8589}
+  /* Ігор */
+  .ihor{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-start}
+  .ihor .facts{flex:1;min-width:260px}
+  .fact{display:flex;gap:10px;margin:9px 0;font-size:.97rem}
+  .fact b{color:var(--text)}
+  .medal-slot{margin-top:16px;border:2px dashed var(--border);border-radius:12px;padding:18px;text-align:center;color:var(--muted);font-size:.9rem}
   /* Реквізити */
-  .req { background: #0d1117; border: 1px dashed var(--border); border-radius: 8px;
-    padding: 14px; margin: 10px 0; font-family: ui-monospace, Consolas, monospace;
-    font-size: 0.95rem; overflow-x: auto; }
-  .req .label { color: var(--muted); font-family: inherit; font-size: 0.82rem; }
-  .copy-btn { background: #21262d; color: var(--text); border: 1px solid var(--border);
-    border-radius: 6px; padding: 4px 10px; cursor: pointer; font-size: 0.8rem; margin-left: 8px; }
-  .copy-btn:hover { border-color: var(--yellow); color: var(--yellow); }
-
-  table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.95rem; }
-  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
-  th { color: var(--muted); font-weight: 600; }
-  td:last-child, th:last-child { text-align: right; }
-
-  ul.checks { list-style: none; margin-top: 8px; }
-  ul.checks li { padding-left: 26px; position: relative; margin: 6px 0; }
-  ul.checks li::before { content: "✔"; position: absolute; left: 0; color: var(--green); }
-
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 10px; }
-  .card-mini { background: #0d1117; border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
-  .card-mini .num { color: var(--yellow); font-weight: 700; }
-
-  .note { border-left: 4px solid var(--yellow); background: #10151c; padding: 12px 14px;
-    border-radius: 0 8px 8px 0; margin-top: 12px; font-size: 0.95rem; }
-  footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 40px; padding: 0 16px; }
-  a { color: var(--yellow); }
-  @media (max-width: 600px) { h1 { font-size: 1.5rem; } header { padding: 40px 0 30px; } }
+  .req{background:var(--bg2);border:1px dashed var(--border);border-radius:10px;padding:14px;margin:10px 0;
+    font-family:ui-monospace,Consolas,monospace;font-size:.95rem;overflow-x:auto}
+  .req .lb{color:var(--muted);font-family:inherit;font-size:.8rem}
+  .cp{background:#1c2430;color:var(--text);border:1px solid var(--border);border-radius:6px;padding:4px 10px;cursor:pointer;font-size:.78rem;margin-left:8px}
+  .cp:hover{border-color:var(--yellow);color:var(--yellow)}
+  .note{border-left:4px solid var(--yellow);background:#141922;border-radius:0 10px 10px 0;padding:13px 16px;margin-top:14px;font-size:.93rem}
+  table{width:100%;border-collapse:collapse;margin-top:10px;font-size:.94rem}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--border)}
+  th{color:var(--muted);font-weight:600}
+  td:last-child{color:var(--muted)}
+  ul.chk{list-style:none;margin-top:10px}
+  ul.chk li{padding-left:26px;position:relative;margin:7px 0}
+  ul.chk li::before{content:"✔";position:absolute;left:0;color:var(--green)}
+  .qr-box{text-align:center;margin:18px 0 4px}
+  .qr-box img{background:#fff;border-radius:12px;padding:10px;width:210px;height:210px}
+  .video-slot{margin-top:14px;border:2px dashed var(--border);border-radius:12px;padding:22px;text-align:center;color:var(--muted)}
+  footer{text-align:center;color:var(--muted);font-size:.85rem;margin-top:44px;padding:0 16px}
+  a{color:var(--yellow)}
+  @media(max-width:640px){.ba{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <script>
-// ============================================================
-//  КОНФІГУРАЦІЯ КАМПАНІЇ — ЗАМІНЮЙ ТІЛЬКИ ТУТ
-// ============================================================
+// ============ КОНФІГ КАМПАНІЇ (оновлюйте тут) ============
 const CONFIG = {
-  // Ціль збору в гривнях. 0 = "ціль уточнюється" (бар показуватиме це)
-  targetUAH: 0,               // TODO: поставити точну ціль після вибору авто
-
-  // Скільки зібрано зараз (оновлюємо вручну раз на тиждень зі скріна баночки)
-  currentUAH: 0,              // TODO: оновлювати щотижня
-
-  // Посилання на банку monobank «На безпеку України»
+  targetUAH: 0,          // ціль, грн (0 = "уточнюється")
+  currentUAH: 0,         // зібрано, грн (оновлювати щотижня)
   jarLink: "https://send.monobank.ua/jar/6kf2A7C3eh",
-
-  // Картка (додатковий канал)
   cardNumber: "4874 1000 3264 7037",
   cardHolder: "Шабат Ігор Володимирович",
-
-  // IBAN для поповнення банки
   iban: "UA923220010000026204383912553",
-  paymentPurpose: "Поповнення рахунку банки",
-
-  // Крипта — TODO: додати адресу/посилання, коли буде готово
-  crypto: "",                 // напр. "bc1q..." або посилання на Whitepay
-
-  // Публічний контакт (Telegram) — TODO: вставити
-  contact: ""                 // напр. "@username"
+  purpose: "Поповнення рахунку банки",
+  crypto: "",            // TODO: адреса гаманця
+  contact: ""            // TODO: Telegram
 };
-// ============================================================
+// ==========================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Прогрес-бар
-  const pct = CONFIG.targetUAH > 0
-    ? Math.min(100, Math.round(CONFIG.currentUAH / CONFIG.targetUAH * 100))
-    : 0;
+  const pct = CONFIG.targetUAH > 0 ? Math.min(100, Math.round(CONFIG.currentUAH/CONFIG.targetUAH*100)) : 0;
   document.getElementById("fill").style.width = pct + "%";
-  document.getElementById("pct").textContent =
-    CONFIG.targetUAH > 0 ? pct + "%" : "ціль уточнюється";
-  document.getElementById("raised").textContent =
-    CONFIG.currentUAH > 0 ? CONFIG.currentUAH.toLocaleString("uk-UA") + " грн" : "збір відкрито";
-  document.getElementById("target").textContent =
-    CONFIG.targetUAH > 0 ? CONFIG.targetUAH.toLocaleString("uk-UA") + " грн" : "ціль уточнюється";
-
-  // Реквізити в текст
+  document.getElementById("pct").textContent = CONFIG.targetUAH > 0 ? pct + "%" : "—";
+  document.getElementById("raised").textContent = CONFIG.currentUAH > 0 ? CONFIG.currentUAH.toLocaleString("uk-UA") + " ₴" : "збір відкрито";
+  document.getElementById("target").textContent = CONFIG.targetUAH > 0 ? CONFIG.targetUAH.toLocaleString("uk-UA") + " ₴" : "ціль уточнюється";
   document.getElementById("jar-href").href = CONFIG.jarLink;
   document.getElementById("card-num").textContent = CONFIG.cardNumber;
   document.getElementById("card-holder").textContent = CONFIG.cardHolder;
   document.getElementById("iban-val").textContent = CONFIG.iban;
-  document.getElementById("purpose").textContent = CONFIG.paymentPurpose;
-
-  // Крипто-блок
-  if (CONFIG.crypto) {
-    document.getElementById("crypto-val").textContent = CONFIG.crypto;
-  } else {
-    document.getElementById("crypto-block").style.display = "none";
-  }
-
-  // Контакт
-  if (CONFIG.contact) {
-    document.getElementById("contact-val").textContent = "Telegram: " + CONFIG.contact;
-  } else {
-    document.getElementById("contact-val").textContent = "Telegram: (вкажемо незабаром)";
-  }
+  document.getElementById("purpose").textContent = CONFIG.purpose;
+  const cr = document.getElementById("crypto-block"); if (CONFIG.crypto) document.getElementById("crypto-val").textContent = CONFIG.crypto; else cr.style.display = "none";
+  const ct = document.getElementById("contact-val"); ct.textContent = CONFIG.contact ? "Telegram: " + CONFIG.contact : "Telegram: з'явиться незабаром";
 });
-
-// Копіювання
-function copyText(id, btn) {
-  const text = document.getElementById(id).textContent.trim();
-  navigator.clipboard.writeText(text).then(() => {
-    const old = btn.textContent; btn.textContent = "Скопійовано!";
-    setTimeout(() => btn.textContent = old, 1500);
-  });
-}
+function copyText(id, btn){const t=document.getElementById(id).textContent.trim();navigator.clipboard.writeText(t).then(()=>{const o=btn.textContent;btn.textContent="Скопійовано!";setTimeout(()=>btn.textContent=o,1500)})}
 </script>
 
 <header>
-  <div class="container">
-    <h1>Третя машина Ігоря згоріла.<br>Допоможемо купити четверту — до Нового року.</h1>
-    <div class="subtitle">Ігор — боєць на позиціях. Двічі купував авто за власні кошти, обидві втратив у ворожих ударах.
-      Добровільний збір: кожна гривня публічно — скріни баночки щотижня, чеки, фото передачі.</div>
-    <div class="flag-line"></div>
+  <div class="wrap">
+    <div class="kicker">Добровільний збір · до 31 грудня</div>
+    <h1>Три машини Ігоря згоріли.<br>Купимо четверту — разом.</h1>
+    <p class="sub">Ігор — військовий Інженерних військ. Він утратив три автомобілі у ворожих ударах
+      і щоразу повертався на позиції. Цього разу збір ведемо ми — прозоро і до кінця.</p>
+    <div class="cta-row">
+      <a class="btn btn-y" id="jar-href" href="#" target="_blank" rel="noopener">Допомогти зараз</a>
+      <a class="btn btn-o" href="#story">Історія трьох машин ↓</a>
+    </div>
+    <div class="flag"></div>
   </div>
 </header>
 
-<div class="container">
+<div class="wrap">
 
   <section>
     <h2>Прогрес збору</h2>
-    <div class="progress-wrap">
-      <div class="progress-bar"><div class="progress-fill" id="fill"></div></div>
-      <div class="progress-labels">
-        <span id="raised">—</span>
-        <span><strong id="pct">—</strong></span>
-        <span>Ціль: <span id="target">—</span></span>
-      </div>
+    <div class="bar"><div class="fill" id="fill"></div></div>
+    <div class="bar-lbl"><span id="raised">—</span><strong id="pct">—</strong><span>Ціль: <span id="target">—</span></span></div>
+    <p style="color:var(--muted);font-size:.9rem;margin-top:10px">Оновлюємо щотижня зі скріном баночки. Дедлайн — 31 грудня.</p>
+    <div class="qr-box">
+      <img src="qr-jar.png" alt="QR — баночка monobank «На безпеку України»">
+      <p style="color:var(--muted);font-size:.85rem;margin-top:6px">Скануйте камерою — донат у застосунку monobank</p>
     </div>
-    <p class="muted" style="margin-top:10px">
-      Оновлюємо щотижня зі скріна баночки. Дедлайн кампанії — 31 грудня.</p>
-    <div style="margin-top:16px">
-      <a class="btn btn-primary" id="jar-href" href="#" target="_blank" rel="noopener">
-        Донатити через банку monobank</a>
+  </section>
+
+  <section id="story">
+    <h2>Історія трьох машин</h2>
+    <p class="lead">Хронологія — з фотографій, які Ігор надсилав власнику збору. Нічого прикрасити не довелося.</p>
+
+    <div class="tl">
+      <div class="tl-item first">
+        <span class="tl-tag tag1">Машина №1 · весна 2024</span>
+        <h3>Daewoo Nexia — куплена на кошти людей</h3>
+        <p>Перший збір зібрали звичайні люди. Нексія возила людей і вантажі, поки в неї не влетіла ракета. Машину знищено.</p>
+        <div class="grid">
+          <div class="ph"><img src="photos/car1_nexia_01.jpg" alt="Нексія — машина №1"><div class="cap">Машина №1 · Daewoo Nexia</div></div>
+          <div class="ph"><img src="photos/car1_nexia_02.jpg" alt="Нексія — машина №1"><div class="cap">Народний збір у роботі</div></div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <span class="tl-tag tag2">Машина №2</span>
+        <h3>Передана родичами</h3>
+        <p>Рідні допомогли машиною, щоб Ігор не залишився без коліс. Фотографій не збереглося. У неї влучив ворожий дрон.</p>
+      </div>
+
+      <div class="tl-item bad">
+        <span class="tl-tag tag3">Машина №3 · дизель 1.9, 2006 · 7 грудня 2024</span>
+        <h3>Купив за власні кошти — накрив «Іскандер»</h3>
+        <p>Третю машину Ігор купив сам, без жодного збору. Після удару не лишилось ані машини, ані речей — усе, що було в салоні, згоріло.</p>
+        <div class="ba">
+          <div class="ph"><span class="lbl ok">Жива</span><img src="photos/car3_alive_01.jpg" alt="Машина №3 — до"></div>
+          <div class="ph"><span class="lbl no">Після удару</span><img src="photos/car3_burned_01.jpg" alt="Машина №3 — після"></div>
+        </div>
+        <div class="grid" style="margin-top:10px">
+          <div class="ph"><img src="photos/car3_alive_02.jpg" alt="Машина №3 — до"></div>
+          <div class="ph"><img src="photos/car3_burned_02.jpg" alt="Машина №3 — після"></div>
+          <div class="ph"><img src="photos/car3_burned_03.jpg" alt="Машина №3 — після"></div>
+        </div>
+      </div>
+
+      <div class="tl-item now">
+        <span class="tl-tag tag4">Машина №4 · цей збір</span>
+        <h3>Четверта — спільна</h3>
+        <p>Ігор знову на позиціях, знову без авто. Цього разу машина буде спільною — від усіх, хто долучиться. Кожна гривня публічна: скріни баночки щотижня, чеки на покупку, фото передачі.</p>
+        <a class="btn btn-y" id="jar2" href="#" target="_blank" rel="noopener">Донатити на баночку</a>
+      </div>
     </div>
   </section>
 
   <section>
-    <h2>Чому цей збір: історія Ігоря</h2>
-    <p><strong>Ігор — боєць на позиціях. У нього згоріла вже третя машина.</strong></p>
-    <div class="grid">
-      <div class="card-mini"><span class="num">Машина №1.</span> Її зібрали люди. Згоріла — прилетіла ракета.</div>
-      <div class="card-mini"><span class="num">Машина №2.</span> Купив за власні кошти. У неї влучив дрон.</div>
-      <div class="card-mini"><span class="num">Машина №3.</span> Купив теж сам. «Іскандер» — не лишилось ані машини, ані речей.</div>
-      <div class="card-mini"><span class="num">Машина №4.</span> Ось за нею цей збір. Ціль — купити й передати до Нового року.</div>
+    <h2>Хто такий Ігор</h2>
+    <div class="ihor">
+      <div class="facts">
+        <div class="fact">🪖 <span><b>Шабат Ігор Володимирович</b> — офіційний збирач кампанії</span></div>
+        <div class="fact">🛠 <span>Служить у <b>Інженерних військах</b> — розмінування, укріплення, логістика на позиціях</span></div>
+        <div class="fact">🚗 <span>Три особисті автомобілі знищено ворожими ударами — жодного разу не просив нічого для себе</span></div>
+        <div class="fact">🏅 <span>Має <b>відзнаки та медалі</b> за службу</span></div>
+        <div class="medal-slot">📷 Секція з фотографіями відзнак — оновлюється<br>(фото надаються, публікація — з дозволу Ігоря)</div>
+      </div>
     </div>
-    <p style="margin-top:14px">
-      Він не скасував збір і не вийшов з ладу. Він знову їде на позиції — і знову без авто.
-      Цього разу робимо це разом.</p>
-    <div class="grid" style="margin-top:14px">
-      <div class="card-mini"><img src="photos/car3_burned_01.jpg" alt="Згоріла машина №3 — наслідки ракетного удару" style="width:100%;border-radius:6px;"></div>
-      <div class="card-mini"><img src="photos/car3_burned_02.jpg" alt="Згоріла машина №3 — наслідки ракетного удару" style="width:100%;border-radius:6px;"></div>
-      <div class="card-mini"><img src="photos/car3_burned_03.jpg" alt="Згоріла машина №3 — наслідки ракетного удару" style="width:100%;border-radius:6px;"></div>
-    </div>
-    <p class="muted" style="margin-top:10px">Машина №3 — дизель 1.9, 2006 рік. Після ворожого удару не лишилось нічого.
-      Фото опубліковано з дозволу власника; метадані видалено.</p>
-    <!-- TODO: додати посилання на публікації в медіа (іншомовні новини) коли надійдуть -->
+    <div class="video-slot">📺 Слот для відео іномовних новин про підрозділ<br>(з'явиться після публікації звіту)</div>
   </section>
 
   <section>
     <h2>Способи допомогти</h2>
-
-    <h3>1. Банка monobank «На безпеку України» — найпростіше</h3>
-    <p class="muted">Тиснеш кнопку — переказ через застосунок monobank, зарахування миттєве.</p>
-    <div style="text-align:center; margin:16px 0">
-      <img src="qr-jar.png" alt="QR-код банки monobank «На безпеку України»" width="220" height="220"
-           style="background:#fff; border-radius:10px; padding:8px;">
-      <p class="muted" style="margin-top:6px">Скануйте QR-код камерою телефону — переказ у застосунку monobank.</p>
-    </div>
-
-    <h3>2. На картку (якщо немає monobank)</h3>
-    <div class="req">
-      <span class="label">Картка:</span> <span id="card-num">—</span>
-      <button class="copy-btn" onclick="copyText('card-num', this)">Копіювати</button><br>
-      <span class="label">Отримувач:</span> <span id="card-holder">—</span>
-    </div>
-
-    <h3>3. IBAN-переказ (поповнення банки з будь-якого банку)</h3>
-    <div class="req">
-      <span class="label">IBAN:</span> <span id="iban-val">—</span>
-      <button class="copy-btn" onclick="copyText('iban-val', this)">Копіювати</button><br>
-      <span class="label">Призначення платежу:</span> <span id="purpose">—</span>
-    </div>
-
-    <h3 id="crypto-block">4. Криптовалюта (для донорів з-за кордону)</h3>
-    <div class="req" id="crypto-req">
-      <span class="label">Адреса:</span> <span id="crypto-val">—</span>
-      <button class="copy-btn" onclick="copyText('crypto-val', this)">Копіювати</button>
-    </div>
-
-    <div class="note">Публікуємо ТІЛЬКИ ці реквізити. Якщо хтось пише вам з іншою карткою
-      чи рахунком «від нашого імені» — це шахрай. Перевіряйте посилання.</div>
+    <h3 style="margin:12px 0 6px">1. Баночка monobank «На безпеку України»</h3>
+    <p style="color:var(--muted);font-size:.93rem">Найпростіше — кнопка або QR-код вище.</p>
+    <h3 style="margin:14px 0 6px">2. На картку</h3>
+    <div class="req"><span class="lb">Картка:</span> <span id="card-num">—</span> <button class="cp" onclick="copyText('card-num',this)">Копіювати</button><br>
+      <span class="lb">Отримувач:</span> <span id="card-holder">—</span></div>
+    <h3 style="margin:14px 0 6px">3. IBAN — з будь-якого банку</h3>
+    <div class="req"><span class="lb">IBAN:</span> <span id="iban-val">—</span> <button class="cp" onclick="copyText('iban-val',this)">Копіювати</button><br>
+      <span class="lb">Призначення:</span> <span id="purpose">—</span></div>
+    <h3 id="crypto-block" style="margin:14px 0 6px">4. Криптовалюта (за кордоном)</h3>
+    <div class="req"><span class="lb">Адреса:</span> <span id="crypto-val">—</span> <button class="cp" onclick="copyText('crypto-val',this)">Копіювати</button></div>
+    <div class="note">⚡ Ми публікуємо <b>тільки ці реквізити</b>. Якщо хтось просить переказати «на іншу картку від імені збору» — це шахрай. Перевіряйте посилання на цій сторінці.</div>
   </section>
 
   <section>
     <h2>На що йдуть кошти</h2>
     <table>
       <tr><th>Стаття</th><th>Орієнтир</th></tr>
-      <tr><td>Автомобіль (SUV / пікап, з пробігом)</td><td>основна частина збору</td></tr>
+      <tr><td>Автомобіль (заміна згорілому дизелю 1.9)</td><td>основна частина збору</td></tr>
       <tr><td>Ремонт і підготовка (шини, масло, АКБ)</td><td>+ резерв</td></tr>
-      <tr><td>Перегін / доставка до підрозділу</td><td>+ резерв</td></tr>
+      <tr><td>Перегін і передача підрозділу</td><td>+ резерв</td></tr>
     </table>
-    <p class="muted" style="margin-top:10px">
-      Точну ціль оприлюднимо після вибору конкретного авто. Кожен чек — у звітах.</p>
-  </section>
-
-  <section>
-    <h2>План кампанії</h2>
-    <div class="grid">
-      <div class="card-mini"><span class="num">Жовтень–листопад.</span> Активний збір, поширення, щотижневі звіти.</div>
-      <div class="card-mini"><span class="num">Кінець листопада.</span> Купівля авто, огляд, ремонт, підготовка.</div>
-      <div class="card-mini"><span class="num">Грудень.</span> Перегін і передача підрозділу.</div>
-      <div class="card-mini"><span class="num">До 31.12.</span> Фото передачі + фінальний публічний звіт за кожну гривню.</div>
-    </div>
+    <p style="color:var(--muted);font-size:.9rem;margin-top:10px">Точну ціль оприлюднимо після вибору конкретного авто. Кожен чек — у звітах.</p>
   </section>
 
   <section>
     <h2>Прозорість — наша обіцянка</h2>
-    <ul class="checks">
-      <li>Щотижневий скрін баночки з датою — у звітах.</li>
-      <li>Чек / договір купівлі авто.</li>
-      <li>Фото і відео передачі автомобіля.</li>
-      <li>Публічний підсумок: скільки зібрано, куди кожна гривня.</li>
-      <li>Збори офіційно оформлені, звітність веде відповідальний за збір.</li>
+    <ul class="chk">
+      <li>Щотижневий скрін баночки з датою</li>
+      <li>Чек і договір купівлі авто</li>
+      <li>Фото й відео передачі машини підрозділу</li>
+      <li>Фінальний підсумок: скільки зібрано, куди кожна гривня</li>
+      <li>За попередні збори Ігор публічно звітував — історія збереглась</li>
     </ul>
   </section>
 
   <section>
-    <h2>Контакти і питання</h2>
+    <h2>Питання і контакти</h2>
     <p id="contact-val">Telegram: —</p>
-    <p class="muted">Пишіть — відповімо на питання про збір, авто або звіти.
-      Репост цієї сторінки — теж реальна допомога.</p>
+    <p style="color:var(--muted);font-size:.93rem">«Це не скам?» — Збирач: Шабат Ігор Володимирович, реквізити збігаються з баночкою monobank.
+      Історія трьох машин підтверджена фотографіями вище. Репост — теж реальна допомога.</p>
   </section>
 
   <section lang="en">
-    <h2>English — how to help</h2>
-    <p><strong>Igor's third vehicle just burned. Help us get him the fourth — by New Year.</strong></p>
-    <p>Igor serves on the front line. His first car — funded by donations — was destroyed by a missile.
-      He bought the second himself; a drone hit it. He bought a third one too — then an Iskander strike
-      left nothing: no car, no belongings. He hasn't quit. He's going back — without a vehicle.</p>
-    <p>Every hryvnia is public: weekly jar screenshots, purchase receipts, delivery photos.</p>
-    <p><a id="jar-link-en" href="#" target="_blank" rel="noopener">Donate via monobank jar</a>
-      — or contact us for crypto / bank transfer details.</p>
-    <script>document.getElementById("jar-link-en").href = CONFIG.jarLink;</script>
+    <h2>English</h2>
+    <p><strong>Three of Ihor's vehicles have burned. Help us get him the fourth.</strong></p>
+    <p>Ihor serves in Ukraine's Engineering Troops. His first car — funded by donations — was destroyed by a missile.
+      The second, given by relatives, was hit by a drone. He bought the third himself; an Iskander strike left nothing behind.
+      He keeps going back to the front — without a vehicle. Goal: the fourth car, by New Year.</p>
+    <p>Every hryvnia is public: weekly jar screenshots, purchase receipts, handover photos.
+      <a href="#" id="jar-en" target="_blank" rel="noopener">Donate via monobank jar</a> — or contact us for bank transfer details.</p>
+    <script>document.getElementById("jar-en").href = CONFIG.jarLink; document.getElementById("jar2").href = CONFIG.jarLink;</script>
   </section>
 
   <footer>
-    Добровольчий збір «На безпеку України». Сторінка не збирає і не зберігає персональні дані донорів.<br>
-    Оновлено: жовтень 2026.
+    Добровольчий збір «На безпеку України» · збирач — Шабат Ігор Володимирович<br>
+    Сторінка не збирає і не зберігає персональні дані донорів · Жовтень 2026
   </footer>
 
 </div>
